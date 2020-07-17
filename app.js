@@ -5,7 +5,9 @@ var bodyParser       = require("body-parser"),
     express          = require("express"),
 	app              = express();
 
-mongoose.connect("mongodb://localhost:27017/blogsite", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost:27017/blogsite", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://dbuser:papamummy@2532314@blogsite.ztinz.mongodb.net/dbuser?retryWrites=true&w=majority", {useNewUrlParser: true});
+// mongodb+srv://dbuser:<password>@blogsite.ztinz.mongodb.net/<dbname>?retryWrites=true&w=majority
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
